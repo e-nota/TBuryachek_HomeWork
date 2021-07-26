@@ -11,7 +11,7 @@ namespace HomeWork1
     {
         public override void DisplayInfo()
         {
-            Console.WriteLine($"Classbook of Biology. Botany = '{Name} {num_of_class} class', author = {Author}, the year of publishing = {Year}");
+            Console.WriteLine($"Classbook of Biology. Botany = '{Name} {NumOfClass} class', author = {Author}, the year of publishing = {Year}");
         }
     }
 }
