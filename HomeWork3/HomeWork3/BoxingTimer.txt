@@ -1,0 +1,7 @@
+Boxing time: 00:00:00.0000153 for n=1 operations
+Boxing time: 00:00:00.0000102 for n=10 operations
+Boxing time: 00:00:00.0000171 for n=100 operations
+Boxing time: 00:00:00.0000594 for n=1000 operations
+Boxing time: 00:00:00.0002621 for n=5000 operations
+Boxing time: 00:00:00.0003681 for n=10000 operations
+Boxing time: 00:00:00.4420337 for n=100000 operations

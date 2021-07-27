@@ -8,7 +8,7 @@ namespace HomeWork3
     {
         static void Main(string[] args)
         {
-            int n = 100000;
+            int n = 1;
             var timerbox = Stopwatch.StartNew();
             // boxing
             for (int i=1; i<=n; i++)
