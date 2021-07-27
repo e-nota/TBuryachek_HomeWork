@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace HomeWork2
 {
@@ -22,51 +22,41 @@ namespace HomeWork2
             FigureStruct figurestr = new FigureStruct { NumberOfFaces = 4, LengthOfFaces = 4, Area = 0 };
 
             FigureStruct NewAreaFigureStr = CalcArea1(figurestr);
-            Console.WriteLine($"figure: NumberOfFaces = {figure.NumberOfFaces}, LengthOfFaces = {figure.LengthOfFaces}, Area = {figure.Area}");
-            Console.WriteLine($"NewAreaFigure: NumberOfFaces = {NewAreaFigure.NumberOfFaces}, LengthOfFaces = {NewAreaFigure.LengthOfFaces}, Area = {NewAreaFigure.Area}");
+            Console.WriteLine($"figure: NumberOfFaces = {figurestr.NumberOfFaces}, LengthOfFaces = {figurestr.LengthOfFaces}, Area = {figurestr.Area}");
+            Console.WriteLine($"NewAreaFigure: NumberOfFaces = {NewAreaFigureStr.NumberOfFaces}, LengthOfFaces = {NewAreaFigureStr.LengthOfFaces}, Area = {NewAreaFigureStr.Area}");
 
             CalcArea2(figurestr);
-            Console.WriteLine($"NumberOfFaces = {figure.NumberOfFaces}, LengthOfFaces = {figure.LengthOfFaces}, Area = {figure.Area}");
+            Console.WriteLine($"NumberOfFaces = {figurestr.NumberOfFaces}, LengthOfFaces = {figurestr.LengthOfFaces}, Area = {figurestr.Area}");
 
         }
         public static Figure CalcArea1 (Figure figure)
         {
-                        
-            int n = figure.NumberOfFaces;
-            double a = figure.LengthOfFaces;
-            double S = (n * Math.Pow(a, 2)) / (4 * Math.Tan(180 / n)); //?
-
-            figure = new Figure() { NumberOfFaces = n, LengthOfFaces = a, Area = S }; //?
-            
+            figure = new Figure() { NumberOfFaces = 4, LengthOfFaces = 4, Area = FormulaS(figure.NumberOfFaces, figure.LengthOfFaces)}; 
             return figure;
          }
 
         public static void CalcArea2 (Figure figure)
         {
-            int n = figure.NumberOfFaces;
-            double a = figure.LengthOfFaces;
-            double S = (n * Math.Pow(a, 2)) / (4 * Math.Tan(180 / n)); //?
-            figure.Area = S;
+             figure.Area = FormulaS(figure.NumberOfFaces, figure.LengthOfFaces);
         }
 //---
         public static FigureStruct CalcArea1(FigureStruct figurestr)
         {
-
-            int n = figurestr.NumberOfFaces;
-            double a = figurestr.LengthOfFaces;
-            double S = (n * Math.Pow(a, 2)) / (4 * Math.Tan(180 / n)); //?
-
-            figurestr = new FigureStruct() { NumberOfFaces = n, LengthOfFaces = a, Area = S }; //?
-
+            figurestr = new FigureStruct()  { NumberOfFaces = 4, LengthOfFaces = 4, Area = FormulaS(figurestr.NumberOfFaces, figurestr.LengthOfFaces) }; 
             return figurestr;
         }
 
         public static void CalcArea2(FigureStruct figurestr)
         {
-            int n = figurestr.NumberOfFaces;
-            double a = figurestr.LengthOfFaces;
-            double S = (n * Math.Pow(a, 2)) / (4 * Math.Tan(180 / n)); //?
-            figurestr.Area = S;
+         
+            figurestr.Area = FormulaS(figurestr.NumberOfFaces, figurestr.LengthOfFaces);
         }
+
+        public static double FormulaS(int n, double a) 
+        {
+            double S = (n * Math.Pow(a, 2)) / (4 * Math.Round(Math.Tan((180 / n) * (Math.PI / 180)), 4));
+            return S;
+        }
+
     }
 }
