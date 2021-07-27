@@ -36,7 +36,7 @@ namespace HomeWork2
             double a = figure.LengthOfFaces;
             double S = (n * Math.Pow(a, 2)) / (4 * Math.Tan(180 / n)); //?
 
-            figure = new Figure() { NumberOfFaces = 4, LengthOfFaces = 4, Area = S }; //?
+            figure = new Figure() { NumberOfFaces = n, LengthOfFaces = a, Area = S }; //?
             
             return figure;
          }
@@ -56,7 +56,7 @@ namespace HomeWork2
             double a = figurestr.LengthOfFaces;
             double S = (n * Math.Pow(a, 2)) / (4 * Math.Tan(180 / n)); //?
 
-            figurestr = new FigureStruct() { NumberOfFaces = 4, LengthOfFaces = 4, Area = S }; //?
+            figurestr = new FigureStruct() { NumberOfFaces = n, LengthOfFaces = a, Area = S }; //?
 
             return figurestr;
         }
