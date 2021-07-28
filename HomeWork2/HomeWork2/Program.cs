@@ -25,7 +25,7 @@ namespace HomeWork2
             Console.WriteLine($"figure: NumberOfFaces = {figurestr.NumberOfFaces}, LengthOfFaces = {figurestr.LengthOfFaces}, Area = {figurestr.Area}");
             Console.WriteLine($"NewAreaFigure: NumberOfFaces = {NewAreaFigureStr.NumberOfFaces}, LengthOfFaces = {NewAreaFigureStr.LengthOfFaces}, Area = {NewAreaFigureStr.Area}");
 
-            CalcArea2(figurestr);
+            CalcArea2 (ref figurestr);
             Console.WriteLine($"NumberOfFaces = {figurestr.NumberOfFaces}, LengthOfFaces = {figurestr.LengthOfFaces}, Area = {figurestr.Area}");
 
         }
@@ -46,7 +46,7 @@ namespace HomeWork2
             return figurestr;
         }
 
-        public static void CalcArea2(FigureStruct figurestr)
+        public static void CalcArea2(ref FigureStruct figurestr)
         {
          
             figurestr.Area = FormulaS(figurestr.NumberOfFaces, figurestr.LengthOfFaces);
