@@ -42,6 +42,7 @@ namespace HomeWork4
             bool status7 = person1 == person3;
             bool status8 = person1 == person4;
 
+
             string txt = "Person1 = " + person1.FIO + ", date of birth:" + person1.DateOfBirth.ToString("d") + ", place of birth:" 
                         + person1.PlaceOfBirth + ", number of passport:" + person1.NumOfPassport +"\n";
 
