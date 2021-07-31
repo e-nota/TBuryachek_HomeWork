@@ -42,16 +42,16 @@ namespace HomeWork4
             bool status7 = person1 == person3;
             bool status8 = person1 == person4;
 
-            string txt = "Person1 = " + person1.FIO + ", date of birth:" + person1.DateOfBirth + ", place of birth:" 
+            string txt = "Person1 = " + person1.FIO + ", date of birth:" + person1.DateOfBirth.ToString("d") + ", place of birth:" 
                         + person1.PlaceOfBirth + ", number of passport:" + person1.NumOfPassport +"\n";
 
-            txt += "Person2 = " + person2.FIO + ", date of birth:" + person2.DateOfBirth + ", place of birth:"
+            txt += "Person2 = " + person2.FIO + ", date of birth:" + person2.DateOfBirth.ToString("d") + ", place of birth:"
                         + person2.PlaceOfBirth + ", number of passport:" + person2.NumOfPassport + "\n";
 
-            txt += "Person3 = " + person3.FIO + ", date of birth:" + person3.DateOfBirth + ", place of birth:"
+            txt += "Person3 = " + person3.FIO + ", date of birth:" + person3.DateOfBirth.ToString("d") + ", place of birth:"
             + person3.PlaceOfBirth + ", number of passport:" + person3.NumOfPassport + "\n";
 
-            txt += "Person4 = " + person4.FIO + ", date of birth:" + person4.DateOfBirth + ", place of birth:"
+            txt += "Person4 = " + person4.FIO + ", date of birth:" + person4.DateOfBirth.ToString("d") + ", place of birth:"
             + person4.PlaceOfBirth + ", number of passport:" + person4.NumOfPassport + "\n";
 
 
