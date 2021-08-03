@@ -9,7 +9,6 @@ namespace Clients
     public class Client
     {
         public string FIO { get; set; }
-        public double cash { get; set; }
         public string PassportNum {get; set;}
 
         public override bool Equals(object obj)
@@ -28,6 +27,10 @@ namespace Clients
 
         }
 
+        public override int GetHashCode()
+        {
+            return PassportNum.GetHashCode();
+        }
 
     }
 }
