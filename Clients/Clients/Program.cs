@@ -46,17 +46,28 @@ namespace Clients
 */
            
 
-            Lei lei = new Lei() { rate = 0.5 };
-            Rubl rubl = new Rubl() { rate = 0.2 };
-            Grivna grivna = new Grivna() { rate = 0.25 };
+            Lei lei = new Lei() { rate = 1.1 };
+            Rubl rubl = new Rubl() { rate = 0.22 };
+            Grivna grivna = new Grivna() { rate = 0.65 };
+            Dollar dol = new Dollar() { rate = 16 };
+            
+            // --- Few accounts for one client ---
+            Account account1lei = new Account() { currency = lei, cash = 100 };
+            Account account1rub = new Account() { currency = rubl, cash = 50 };
+            Account account1grn = new Account() { currency = grivna, cash = 200 };
+            Account account2grn = new Account() { currency = grivna, cash = 10.5 };
+            Account account3lei = new Account() { currency = lei, cash = 278 };
+            Account account4rub = new Account() { currency = rubl, cash = 1000 };
+            Account account4dol = new Account() { currency = dol, cash = 50 };
+            Account account5rub = new Account() { currency = rubl, cash = 1 };
 
-            Account account1 = new Account() { currency = lei, cash = 100 };
-            Account account2 = new Account() { currency = grivna, cash = 10.5 };
-            Account account3 = new Account() { currency = lei, cash = 278 };
-            Account account4 = new Account() { currency = rubl, cash = 1000 };
-            Account account5 = new Account() { currency = rubl, cash = 1 };
+            List<Account> account1 = new List<Account> { account1lei, account1rub, account1grn };
+            List<Account> account2 = new List<Account> { account2grn };
+            List<Account> account3 = new List<Account> { account3lei };
+            List<Account> account4 = new List<Account> { account4rub, account4dol};
+            List<Account> account5 = new List<Account> { account5rub };
 
-            Dictionary<Client, Account> ClientBalance = new Dictionary<Client, Account>
+            Dictionary<Client, List<Account>> ClientBalance = new Dictionary<Client, List<Account>>
             {
                 {client1, account1 },
                 {client2, account2 },
@@ -65,40 +76,12 @@ namespace Clients
                 {client5, account5 }
             };
 
-            /*
-            Dictionary<string, double> CourseDollar = new Dictionary<string, double>
-           {
-               {"RUB", 2},
-               {"LEI", 3},
-               {"GRN", 4}
-           };
-
-            Dictionary<string, double> CourseRubl = new Dictionary<string, double>
-           {
-               {"DOL", 5},
-               {"LEI", 6},
-               {"GRN", 7}
-           };
-
-            Dictionary<string, double> CourseGrn = new Dictionary<string, double>
-           {
-               {"DOL", 8},
-               {"LEI", 9},
-               {"RUB", 9.5}
-           };
-
-            Dictionary<string, double> CourseLei = new Dictionary<string, double>
-           {
-               {"DOL", 10},
-               {"RUB", 11},
-               {"GRN", 12}
-           };
-*/
+            // ------
 
             var CurrencyFrom = new Rubl() { rate = 11.5 };
-            var CurrencyTo = new Dollar() { rate = 1 };
+            var CurrencyTo = new Dollar() { rate = 2 };
             
-            decimal summ = CurrencyConverter(CurrencyFrom, CurrencyTo, 100);
+            decimal summ = CurrencyConverter(CurrencyFrom, CurrencyTo, 10);
 
         }
         public static decimal CurrencyConverter(Currency valin,  Currency valout, decimal sumin)
