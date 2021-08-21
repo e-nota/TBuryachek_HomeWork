@@ -12,7 +12,7 @@ namespace HomeWork6
             Dictionary<Figure, string> DFigures = new Dictionary<Figure, string>();
 
             Random rnd = new Random();
-            int count = 50000;
+            int count = 10000;
             for (int i = 1; i <= count; i++)
             {
                 var newfigure = new Figure() { SideCount = rnd.Next(3, 1000), SideLength = rnd.Next(1, 10000) };

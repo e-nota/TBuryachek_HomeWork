@@ -10,6 +10,10 @@ namespace HomeWork6
     {
         public int SideCount { get; set; }
         public int SideLength { get; set; }
+        
+        private int intTest { get; set; }
+
+	    public string strTest = "string test";
         public override bool Equals(object obj)
         {
             if (obj == null)
@@ -37,6 +41,11 @@ namespace HomeWork6
         public override int GetHashCode()
         {
             return SideCount + SideLength;
+        }
+
+        public void Display (string str)
+        {
+            Console.WriteLine(str);
         }
     }
 }
